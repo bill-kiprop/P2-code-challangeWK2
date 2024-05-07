@@ -39,9 +39,9 @@
 }
 
 .iconsDiv img {
-  width: 50px; /* Adjust the width as needed */
+  width: 50px; 
   height: auto;
-  margin-right: 10px; /* Adjust spacing between images and text */
+  margin-right: 10px; 
 }
 
 .iconsDiv p {
@@ -59,3 +59,18 @@ margin-right: 40px;
   width: 25px;
   height: 25px;
 }
+.avatarSpecs{
+  border-radius: 100%;
+  border: 1px solid hsl(0, 2%, 17%);
+  
+}
+.Specs-container {
+  display: flex;
+  -ms-flex-item-align: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.specsdiv{
+  
+}
+

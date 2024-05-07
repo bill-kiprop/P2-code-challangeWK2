@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function Botcard({ name, health, damage, amour, Botclass, catchphrase, image, created, updated }) {
+
+export default function Botcard({ id ,name, health, damage, amour, Botclass, catchphrase, image, created, updated }) {
  
   return (
+    <Link to={`/robot/${id}`}>
     <div>
         
     <div className='card'>
@@ -27,5 +30,6 @@ export default function Botcard({ name, health, damage, amour, Botclass, catchph
             
     </div>
     </div>
+    </Link>
   )
 }

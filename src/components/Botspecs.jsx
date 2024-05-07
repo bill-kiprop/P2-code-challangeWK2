@@ -1,33 +1,37 @@
 // BotSpecs.js
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
+import Yourbotarmy from './Yourbotarmy';
 
-export default function BotSpecs() {
-  const { botId } = useParams();
-  const [botSpecs, setBotSpecs] = useState(null);
-
-  useEffect(() => {
-    fetch(`http://localhost:3000/bots/${botId}`)
-      .then((res) => res.json())
-      .then((data) => setBotSpecs(data));
-  }, [botId]);
-
+export default function BotSpecs({ botSpecs }) {
   if (!botSpecs) {
-    return <div>Loading...</div>;
+    return <div>No bot specs available.</div>;
   }
 
   return (
     <div>
-      <h2>Bot Specs</h2>
-      <p>Name: {botSpecs.name}</p>
-      <p>Health: {botSpecs.health}</p>
-      <p>Damage: {botSpecs.damage}</p>
-      <p>Armor: {botSpecs.armor}</p>
-      <p>Class: {botSpecs.bot_class}</p>
-      <p>Catchphrase: {botSpecs.catchphrase}</p>
+        <Yourbotarmy />
+    <div className='Specs-container'>
+      
+        <div>
+            <img 
+            src={botSpecs.avatar_url}
+            className='avatarSpecs'/>
+        </div>
+        <div>
+            
+      <p>NAME: {botSpecs.name}</p>
+     
+      <p>CLASS: {botSpecs.bot_class}</p>
+      <p>CATCHPHRASE: {botSpecs.catchphrase}</p>
+      <div className='iconsDiv'>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBrdDLtTlLtPZffGAULyJgFBci2-IbXOv6Dq2311XsnQ&s" className='icon'/><p className='text'>{botSpecs.health}</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-n890p4HuTf6H0eFGCHbhLOTBV_inIw2tDluja2lNPA&s" className='icon'/><p>{botSpecs.damage}</p>
+            <img src="https://t4.ftcdn.net/jpg/01/87/35/01/360_F_187350122_iDuilaJkEa74U4LCNY7noWTgRf0p3ufb.jpg" className='icon'/><p>{botSpecs.armor}</p>
+        </div>
       <p>Created At: {botSpecs.created_at}</p>
       <p>Updated At: {botSpecs.updated_at}</p>
-      {/* Add other specs as needed */}
+      </div>
+    </div>
     </div>
   );
 }
