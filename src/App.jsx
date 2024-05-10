@@ -6,6 +6,7 @@ import Yourbotarmy from "./components/Yourbotarmy";
 
 function App() {
   const [robots, setRobots] = useState([])
+  
   useEffect(() => {
     fetch('http://localhost:3000/bots', {
       method: 'GET',
@@ -16,6 +17,7 @@ function App() {
     .then((res) => res.json())
     .then((data) => setRobots(data))
   }, []);
+  
   
  console.log(robots)
 

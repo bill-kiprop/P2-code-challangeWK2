@@ -1,12 +1,16 @@
-// SortBar.js
 import React from 'react';
 
-export default function SortBar({ sortBy }) {
-  return (
-    <div>
-      <button onClick={() => sortBy('health')}>Sort by Health</button>
-      <button onClick={() => sortBy('damage')}>Sort by Damage</button>
-      <button onClick={() => sortBy('armor')}>Sort by Armor</button>
-    </div>
-  );
+export default function SortBar({ sortBots }) {
+    const handleSort = (criteria) => {
+        sortBots(criteria);
+    };
+
+    return (
+        <div>
+            <p>Sort By:</p>
+            <button className='Sortbutton' onClick={() => handleSort('health')}>Health</button>
+            <button className='Sortbutton' onClick={() => handleSort('damage')}>Damage</button>
+            <button className='Sortbutton' onClick={() => handleSort('armor')}>Armor</button>
+        </div>
+    );
 }
