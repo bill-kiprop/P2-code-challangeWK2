@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./home";
-// import Botcollection from "../Botcollection";
+
 import Botcard from "../Botcard";
 import Botdetails from "./Botdetails";
 const router1 = createBrowserRouter([
