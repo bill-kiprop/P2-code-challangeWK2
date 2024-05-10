@@ -1,8 +1,18 @@
-# React + Vite
+## project name
+BOT BATTLR
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## author 
+Bill Kiprop
 
-Currently, two official plugins are available:
+## technologies used
+React
+HTML
+CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## link to the live server 
+
+## video example
+![video example](public/Screencast%20from%2011-05-24%2000_36_29.gif)
+
+## licence 
+MIT licence
